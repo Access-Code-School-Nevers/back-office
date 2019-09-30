@@ -19,6 +19,15 @@
             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
             <li class="nav-item"><a class="nav-link fas fa-search fa-flip-horizontal" href="#" style="color:#00a99d;"></a></li>
             <li class="nav-item"><a class="nav-link" onclick="document.getElementById('id01').style.display='block'" href="#"><i class="far fa-user"></i></a></li>
+
+
+            <?php if(isset($_SESSION['login_in'])){
+              echo '<li class="nav-item"><a class="nav-link" href="BackOffice.php" style="color:#00a99d;"><i class="fas fa-user-cog"></i></a></li>';
+            } ?>
+            <?php if(isset($_SESSION['login_in'])){
+              echo '<li class="nav-item"><a class="nav-link" href="deconexion.php" style="color:#00a99d;"><i class="fas fa-door-open"></i></a></li>';
+            } ?>
+
       </ul>
     </div>
   </nav>

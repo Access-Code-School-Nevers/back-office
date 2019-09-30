@@ -34,7 +34,7 @@ if(isset($_SESSION['login_in'])){
       </div>
 
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Formulaire login >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-			<div class="container">
+			<div id="form01" class="container">
 			 <label for="pseudo"><b>Pseudo</b></label>
 			 <input type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
 
@@ -47,25 +47,22 @@ if(isset($_SESSION['login_in'])){
 			 </label>
 		 </div>
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Formulaire Creer un Compte >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-      <!-- <div class="container">
-        <label for="pseudo"><b>Pseudo</b></label>
-        <input type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
+      <div id="form02" class="container" style="display:none;">
+        <label for="pseudo2"><b>Pseudo</b></label>
+        <input type="text" placeholder="Entrer votre pseudo" name="pseudo2" required>
 
-        <label for="password"><b>Mot de passe</b></label>
-        <input type="password" placeholder="Entrer votre mot de passe" name="password" required>
+        <label for="password2"><b>Mot de passe</b></label>
+        <input type="password" placeholder="Entrer votre mot de passe" name="password2" required>
 
-				<label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Entrer votre mot de passe" name="email" required>
+				<label for="email2"><b>Email</b></label>
+        <input type="text" placeholder="Entrer votre mot de passe" name="email2" required>
 
-        <button type="submit" style="border-radius: 5px;">Se connecter</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
-        </label>
-      </div> -->
+        <button type="submit" style="background-color: #0096ff; border-radius: 5px;">Creer un compte</button>
+      </div>
 
       <div class="container" style="background-color:#f1f1f1; border: 1px solid gainsboro; border-bottom-left-radius: 3px;border-bottom-right-radius: 0.3rem">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="border-radius: 5px;">Quitter</button>
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="border-radius: 5px; background-color: #0096ff;">Creer un compte</button>
+        <button type="button" id="buttonForm2" class="cancelbtn" style="border-radius: 5px; background-color: #0096ff;">Créer un compte</button>
         <span class="psw">Mot de passe <a href="#">oublié?</a></span>
       </div>
     </form>

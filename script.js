@@ -1,3 +1,14 @@
+
+  let buttonForm2Elt = document.getElementById('buttonForm2');
+  let containerForm = document.getElementById('form01');
+  let containerForm2 = document.getElementById('form02')
+
+  buttonForm2Elt.addEventListener("click", function(e){
+    containerForm.innerHTML = "";
+    containerForm2.style.display = "block";
+  });
+
+
 /* >>>>>>>>>> SMOOTH SCROLL <<<<<<<<<< */
 $(document).ready(function(){
     $("a").on('click', function(event) {
