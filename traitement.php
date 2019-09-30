@@ -4,11 +4,18 @@
   $username = "root";
   $password = "";
   $dbname = "db_startuprr";
-  $sujet = $_GET['subject'];
-  $contenu = $_GET['content'];
+  $sujet = $_POST['subject'];
+  $contenu = $_POST['content'];
 
-echo $sujet;
-echo $contenu;
+  if( $_FILES['file']['name'] != "" ) {
+      $uploadfolder = $_SERVER['DOCUMENT_ROOT']."/back-office/uploads";
+      $filename = $_FILES['file']['name'];
+      move_uploaded_file( $_FILES['file']['tmp_name'], "$uploadfolder/$filename" ) or
+       die( "Could not copy file!");
+  }
+  else {
+      die("No file specified!");
+  }
 
   try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
